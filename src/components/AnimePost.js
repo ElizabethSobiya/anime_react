@@ -2,8 +2,8 @@ import React from 'react'
 import './Anime.css'
 import { useDrag } from "react-dnd";
 
-function AnimePost({posts, loading, id}) { 
-  console.log(posts)
+function AnimePost({posts, id}) { 
+  // console.log(posts)
       const [{ isDragging }, drag] = useDrag(() => ({
         type: "image",
         item: { id: id },
@@ -12,10 +12,10 @@ function AnimePost({posts, loading, id}) {
         }),
       }));
     
-      if (loading) {
-        return <h2>Loading...</h2>;
+      // if (loading) {
+      //   return <h2>Loading...</h2>;
        
-      }
+      // }
   return (
     <div className='container'>  
     {posts.map((post, id) => (
@@ -26,6 +26,7 @@ function AnimePost({posts, loading, id}) {
        <p>  {post.title}</p>
        <p>{post.score}/10</p>
        <p>{post.studios.name}</p>
+       {/* <button>+ Add to watchlist</button> */}
        </div>
       ))}
     </div>

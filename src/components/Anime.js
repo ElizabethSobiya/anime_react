@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import './Anime.css'
 import AnimePost from './AnimePost';
 import Genre from './Genre';
+import './SearchBar.css'
 
 
-const Anime = ({ posts, loading }) => {
+const Anime = ({ posts }) => {
   
 
   // the value of the search field 
@@ -36,30 +37,33 @@ const Anime = ({ posts, loading }) => {
   };
   return (
    <>
-   <div>  
+   <div className='search-container'>  
    <input
         type="search"
         value={search}
         onChange={filter}
-        className="input"
+        className="search-input"
         placeholder="Filter"/>
+        <a href="#" class="search-btn">
+                <i class="fas fa-search"></i>      
+        </a>
    </div>
           
        {/* <AnimePost posts={posts} loading= {loading}/> */}
-
-       <div className='anime'>
-
-      <Genre posts={posts}/>
-
-    <div className='container'>
-    {foundAnime && foundAnime.length > 0 ? (
-          foundAnime.map((post,id) => (
-        <div key={id} className = 'posts'>
-        <img src={post.images.jpg.image_url} alt="products" />
-        <p>  {post.title}</p>
-        <p>{post.score}/10</p>
-        </div>
-     ))
+      
+       <div className='anime'>   
+       <div className='genre'>
+       <Genre posts={posts}/>   
+       </div>
+       <div className='container'>
+                {foundAnime && foundAnime.length > 0 ? (
+                       foundAnime.map((post,id) => (
+                 <div key={id} className = 'posts'>
+                   <img src={post.images.jpg.image_url} alt="products" />
+                     <p>  {post.title}</p>
+                     <p>{post.score}/10</p>
+                       {/* <button>+ Add to watchlist</button> */}
+                  </div>))
      ) :  (
         <AnimePost posts={posts}/>
       )}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Anime.css'
+import './Pagination.css'
 
 const Pagination = ({ limit, totalProducts, paginate }) => {
   const pageCount = [];

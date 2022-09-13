@@ -6,11 +6,12 @@
 }
 
 body{
-    background-color: black;
-    color: whitesmoke;
+  background-color: #1e7d7b;
+  height: 100vh;
 }
 
 h1{
+  
     align-items: center;
     text-align: center;
 }
@@ -20,20 +21,23 @@ h1{
     text-align: center;
     text-transform: capitalize;
     padding: 1%;
-    color: #f1f1f1;
+    color: #0b0a0a;
  }
 
  .container{
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 1rem;
-    margin: 2% 5% 0% 10%;
-    width: auto;
+    margin: 2% 2% 0% 5%;
+    width: 70%;
     height: fit-content; 
 }
 
 .anime{
-   
+   display: flex;
+   flex-direction:row;
+   justify-content: space-between;
+   width: 100%;
 }
 
 /* .head{
@@ -43,16 +47,12 @@ h1{
 } */
 
 
-.input {
-    padding: 5px 15px;
-    width: 300px;
-    color: black;
-  }
+
 
  .posts{
   display: flex;
   flex-direction: column;
-    box-shadow: 0 0 1em rgba(255, 254, 254, 0.3);
+    box-shadow: 0 0 1em rgb(55, 53, 53);
     width: 19rem;
     height: 18rem;
  }
@@ -67,38 +67,6 @@ img{
     -o-border-radius: 10%; */
 }
 
-/* pagination starts */
-
-.pagination {
-    display: inline-block;
-    margin-left:40%;
-    background-color: rgb(247, 248, 249);
-  }
-  
-  .pagination a {
-    color: black;
-    padding: 8px 16px;
-    text-decoration: none;
-  }
-  ul.pagination {
-    padding: 1% 2%;
-    list-style: none;
-
-  }
-  ul.pagination li {
-    display: inline;
-}
-
-  
-  /* Add a grey background color on mouse-over */
-  .pagination a:hover:not(.active) {
-    width: auto;
-    height: auto;
-    background-color: rgb(24, 91, 30);
-    color: white;
-}
-
-/* pagination ends */
 
 .Board {
   width: 300px;
@@ -120,10 +88,14 @@ img{
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #8c8081;
+    background: #1e7d7b;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background:#8c8081;
+    background:#1e7d7b;
   }
+
+
+
+

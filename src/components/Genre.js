@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Anime.css'
+import './Genre.css'
 
 function Genre({posts}) {
 
@@ -16,12 +16,12 @@ function Genre({posts}) {
     
   return (
    <>
-    <div className='genre'>
-        <button onClick={()=> filterByGenre('Action')} >Action</button>
-        <button>Adventure</button>
-        <button>Comedy</button>
-        <button>Comedy</button>
-        <button>Sci-Fi</button>
+    <div >
+      <h1>Filter by Genre</h1>
+        <button onClick={()=> filterByGenre('Action')}className={'btn'} >Action</button>
+        <button className={'btn'}>Adventure</button>
+        <button className={'btn'}>Comedy</button>
+        <button className={'btn'}>Sci-Fi</button>
        </div>
    </>
   )

@@ -1,0 +1,32 @@
+/* pagination starts */
+
+.pagination {
+    display: inline-block;
+    margin-left:40%;
+    background-color: rgb(247, 248, 249);
+  }
+  
+  .pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  ul.pagination {
+    padding: 1% 2%;
+    list-style: none;
+
+  }
+  ul.pagination li {
+    display: inline;
+}
+
+  
+  /* Add a grey background color on mouse-over */
+  .pagination a:hover:not(.active) {
+    width: auto;
+    height: auto;
+    background-color: rgb(24, 91, 30);
+    color: white;
+}
+
+/* pagination ends */

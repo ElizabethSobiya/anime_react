@@ -15,19 +15,19 @@ function DragDrop({posts}) {
   }));
 
   const addImageToBoard = (id) => {
-    const pictureList = posts.filter((picture) => id === picture.id);
+    const pictureList = posts.filter((post) => id === post.id);
     setBoard((board) => [...board, pictureList[0]]);
   };
   return (
     <>
       <div className="Pictures">
-        {posts.map((picture) => {
-          return <AnimePost posts={posts} id={picture.id} />;
+        {posts.map((post) => {
+          return <AnimePost posts={posts} id={post.id} />;
         })}
       </div>
       <div className="Board" ref={drop}>
-        {board.map((picture) => {
-          return <AnimePost posts={posts} id={picture.id} />;
+        {board.map((post) => {
+          return <AnimePost posts={posts} id={post.id} />;
         })}
       </div>
     </>
