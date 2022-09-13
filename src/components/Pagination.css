@@ -2,7 +2,9 @@
 
 .pagination {
     display: inline-block;
-    margin-left:40%;
+    margin-left:50%;
+    margin-top: 5%;
+    margin-bottom: 2%;
     background-color: rgb(247, 248, 249);
   }
   
@@ -23,8 +25,8 @@
   
   /* Add a grey background color on mouse-over */
   .pagination a:hover:not(.active) {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     background-color: rgb(24, 91, 30);
     color: white;
 }

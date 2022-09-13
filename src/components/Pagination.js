@@ -13,7 +13,7 @@ const Pagination = ({ limit, totalProducts, paginate }) => {
       <ul className='pagination'>
         {pageCount.map(number => (
           <li key={number} >
-            <a onClick={() => paginate(number)} href='!#'>
+            <a onClick={() => paginate(number)} href='/#'>
               {number}
             </a>
           </li>

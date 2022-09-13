@@ -7,18 +7,20 @@ function Genre({posts}) {
 
   const filterByGenre = (items) => {
     const genre =  posts.filter((currData)=> {
-      console.log(currData.genres.name)
+      // console.log(currData.genres.name)
       return currData.genres.name === items;
+      
     })
     setFilterData(genre)
     console.log(genre)  
+    console.log('hi')
   }
     
   return (
    <>
     <div >
-      <h1>Filter by Genre</h1>
-        <button onClick={()=> filterByGenre('Action')}className={'btn'} >Action</button>
+      <p>Filter by Genre</p>
+        <button onClick={()=> filterByGenre('Comedy')} className={'btn'} >Action</button>
         <button className={'btn'}>Adventure</button>
         <button className={'btn'}>Comedy</button>
         <button className={'btn'}>Sci-Fi</button>

@@ -6,15 +6,16 @@ button{
   
   }
   .genre{
-    width: 30%;
+    width: 20%;
     margin-top: 3%;
+    margin-left: 2%;
   }
 .btn{
     color: #FFF;
     width: 60%;
     transition: all 0.5s;
     position: relative;
-    margin: 10%;
+    margin: 6%;
   }
   .btn::before {
     content: '';
@@ -47,4 +48,16 @@ button{
   .btn:hover::after {
     opacity: 1;
     transform: scale(1,1);
+  }
+
+
+  @media (max-width: 750px) {
+    .genre {  width: 0%; }
+  }
+  
+  @media (min-width: 1040px) {
+    .genre {  width: 20%; }
+  }
+  @media (max-width: 400px) {
+    .genre {  width: 5%; }
   }

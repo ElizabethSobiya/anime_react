@@ -17,7 +17,7 @@ const App = () => {
     const fetchPosts = async () => {
       setLoading(true);
       const res = await axios.get('https://api.jikan.moe/v4/anime');
-      console.log(res.data.data)
+      // console.log(res.data.data)
       setPosts(res.data.data);
       setLoading(false);
     };

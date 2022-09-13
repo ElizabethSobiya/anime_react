@@ -3,6 +3,8 @@ import './Anime.css'
 import AnimePost from './AnimePost';
 import Genre from './Genre';
 import './SearchBar.css'
+import './Genre.css'
+
 
 
 const Anime = ({ posts }) => {
@@ -10,6 +12,7 @@ const Anime = ({ posts }) => {
 
   // the value of the search field 
   const [search, setSearch] = useState('');
+  const [filterData, setFilterData] = useState(posts);
 
 //   the search result
   const [foundAnime, setFoundAnime] = useState(posts);
@@ -35,6 +38,21 @@ const Anime = ({ posts }) => {
 
     setSearch(keyword);
   };
+
+ 
+
+  const filterByGenre = (items) => {
+    const genre =  posts.filter((currData)=> {
+      // console.log(currData.genres.name)
+      return currData.source === items;
+      
+    })
+    setFilterData(genre)
+    console.log(genre)  
+    console.log('hi')
+  }
+
+
   return (
    <>
    <div className='search-container'>  
@@ -44,10 +62,11 @@ const Anime = ({ posts }) => {
         onChange={filter}
         className="search-input"
         placeholder="Filter"/>
-        <a href="#" class="search-btn">
+        <a href="/#" class="search-btn">
                 <i class="fas fa-search"></i>      
         </a>
    </div>
+   {/* <button onClick={()=> filterByGenre('Original')} className={'btn'} >Action</button> */}
           
        {/* <AnimePost posts={posts} loading= {loading}/> */}
       

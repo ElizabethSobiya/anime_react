@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AnimePost from "./AnimePost";
+import Picture from "./Picture";
 import { useDrop } from "react-dnd";
 import "../App.css";
 
@@ -22,12 +22,12 @@ function DragDrop({posts}) {
     <>
       <div className="Pictures">
         {posts.map((post) => {
-          return <AnimePost posts={posts} id={post.id} />;
+          return <Picture url={post.images.jpg.image_url} id={post.id} />;
         })}
       </div>
       <div className="Board" ref={drop}>
         {board.map((post) => {
-          return <AnimePost posts={posts} id={post.id} />;
+          return <Picture url={post.images.jpg.image_url} id={post.id} />;
         })}
       </div>
     </>
