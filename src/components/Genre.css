@@ -9,13 +9,26 @@ button{
     width: 20%;
     margin-top: 3%;
     margin-left: 2%;
+   
   }
+
+ .heading{
+    font-size: 20px;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #0b0a0a;
+    margin-left: 3%;
+ }
+  
 .btn{
     color: #FFF;
     width: 60%;
     transition: all 0.5s;
     position: relative;
     margin: 6%;
+    font-weight: bold;
+    font-size: 18px;
   }
   .btn::before {
     content: '';
@@ -50,6 +63,9 @@ button{
     transform: scale(1,1);
   }
 
+.btn:hover{
+    color:black;
+  }
 
   @media (max-width: 750px) {
     .genre {  width: 0%; }

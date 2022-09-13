@@ -15,7 +15,7 @@ h1{
     align-items: center;
     text-align: center;
 }
- p{
+ .content{
     font-family: 'Brush Script MT', cursive;
     font-weight: 600;
     text-align: center;
@@ -28,12 +28,16 @@ h1{
     display: grid;
     grid-template-columns: repeat(3, 2fr);
     gap: 1rem;
-    margin: 2% 2% 0% 5%;
+    margin: 2% 2% 0% 2%;
     width: 90%;
     height: fit-content; 
     cursor: pointer;
 }
 
+.content:hover{
+ color: white;
+ 
+}
 
 
 .anime{

@@ -23,9 +23,9 @@ function AnimePost({posts, id}) {
        <img src={post.images.jpg.image_url} 
       width="150px"  ref={drag}  style={{ border: isDragging ? "5px solid pink" : "0px" }}
        alt="anime" />
-       <p>  {post.title}</p>
-       <p>{post.score}/10</p>
-       <p>{post.studios.name}</p>
+       <p className='content'>  {post.title}</p>
+       <p className='content'>{post.score}/10</p>
+       <p className='content'>{post.studios.name}</p>
        {/* <button>+ Add to watchlist</button> */}
        </div>
       ))}

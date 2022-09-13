@@ -19,7 +19,7 @@ function Genre({posts}) {
   return (
    <>
     <div >
-      <p>Filter by Genre</p>
+      <p className='heading'>Filter by Genre</p>
         <button onClick={()=> filterByGenre('Comedy')} className={'btn'} >Action</button>
         <button className={'btn'}>Adventure</button>
         <button className={'btn'}>Comedy</button>

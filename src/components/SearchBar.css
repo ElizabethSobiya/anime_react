@@ -27,11 +27,11 @@
     width: 0px;
     font-weight: 500;
     font-size: 16px;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+       
 }
 
 .search-container .search-btn .fas{
@@ -46,6 +46,6 @@
 }
 
 .search-container:hover{
-  animation: hoverShake 0.10s linear 3;
-  -webkit-animation: hoverShake 0.10s linear 3;
+  animation: hoverShake 0.01s linear 3;
+  -webkit-animation: hoverShake 0.01s linear 3;
 }

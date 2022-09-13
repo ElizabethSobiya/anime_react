@@ -6,7 +6,6 @@ import './SearchBar.css'
 import './Genre.css'
 
 
-
 const Anime = ({ posts }) => {
   
 
@@ -41,16 +40,16 @@ const Anime = ({ posts }) => {
 
  
 
-  const filterByGenre = (items) => {
-    const genre =  posts.filter((currData)=> {
-      // console.log(currData.genres.name)
-      return currData.source === items;
+  // const filterByGenre = (items) => {
+  //   const genre =  posts.filter((currData)=> {
+  //     // console.log(currData.genres.name)
+  //     return currData.source === items;
       
-    })
-    setFilterData(genre)
-    console.log(genre)  
-    console.log('hi')
-  }
+  //   })
+  //   setFilterData(genre)
+  //   console.log(genre)  
+  //   console.log('hi')
+  // }
 
 
   return (
@@ -79,8 +78,8 @@ const Anime = ({ posts }) => {
                        foundAnime.map((post,id) => (
                  <div key={id} className = 'posts'>
                    <img src={post.images.jpg.image_url} alt="products" />
-                     <p>  {post.title}</p>
-                     <p>{post.score}/10</p>
+                     <p className='content'>  {post.title}</p>
+                     <p className='content'>{post.score}/10</p>
                        {/* <button>+ Add to watchlist</button> */}
                   </div>))
      ) :  (
