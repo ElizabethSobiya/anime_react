@@ -1,17 +1,31 @@
 import React from 'react'
 import './Anime.css'
+import { useDrag } from "react-dnd";
 
-function AnimePost({posts, loading}) { 
-    if (loading) {
-        return <h2>Loading...</h2>;
-      }
+function AnimePost({posts, loading, id}) { 
+  console.log(posts)
+      const [{ isDragging }, drag] = useDrag(() => ({
+        type: "image",
+        item: { id: id },
+        collect: (monitor) => ({
+          isDragging: !!monitor.isDragging(),
+        }),
+      }));
     
+      if (loading) {
+        return <h2>Loading...</h2>;
+       
+      }
   return (
-    <div className='container'>
+    <div className='container'>  
     {posts.map((post, id) => (
-       <div key={id} className = 'posts'>
-       <img src={post.images.jpg.image_url} alt="products" />
+       <div key={id} className = 'posts'> 
+       <img src={post.images.jpg.image_url} 
+      width="150px"  ref={drag}  style={{ border: isDragging ? "5px solid pink" : "0px" }}
+       alt="anime" />
        <p>  {post.title}</p>
+       <p>{post.score}/10</p>
+       <p>{post.studios.name}</p>
        </div>
       ))}
     </div>

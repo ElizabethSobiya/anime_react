@@ -20,6 +20,7 @@ h1{
     text-align: center;
     text-transform: capitalize;
     padding: 1%;
+    color: #f1f1f1;
  }
 
  .container{
@@ -32,8 +33,7 @@ h1{
 }
 
 .anime{
-    display: flex;
-    flex-direction: row;
+   
 }
 
 /* .head{
@@ -50,9 +50,11 @@ h1{
   }
 
  .posts{
+  display: flex;
+  flex-direction: column;
     box-shadow: 0 0 1em rgba(255, 254, 254, 0.3);
     width: 19rem;
-    height: 16rem;
+    height: 18rem;
  }
 
 img{
@@ -98,6 +100,12 @@ img{
 
 /* pagination ends */
 
+.Board {
+  width: 300px;
+  height: 500px;
+  border: 2px solid red;
+  background-color: #f1f1f1;
+}
 
 
 /* width */

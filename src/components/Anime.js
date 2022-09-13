@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Anime.css'
+import AnimePost from './AnimePost';
 import Genre from './Genre';
-// import AnimePost from './AnimePost';
+
 
 const Anime = ({ posts, loading }) => {
   
@@ -56,10 +57,11 @@ const Anime = ({ posts, loading }) => {
         <div key={id} className = 'posts'>
         <img src={post.images.jpg.image_url} alt="products" />
         <p>  {post.title}</p>
+        <p>{post.score}/10</p>
         </div>
      ))
      ) :  (
-        <h1>No results found!</h1>
+        <AnimePost posts={posts}/>
       )}
    </div>
        </div>
